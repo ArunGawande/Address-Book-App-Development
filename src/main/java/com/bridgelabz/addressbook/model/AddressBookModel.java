@@ -1,10 +1,12 @@
 package com.bridgelabz.addressbook.model;
 
 import com.bridgelabz.addressbook.Dto.AddressBookDto;
-import org.hibernate.annotations.Table;
+import lombok.Data;
 
 import javax.persistence.*;
-
+@Entity
+@Data
+@Table(name = "addressbook")
 public class AddressBookModel {
 
     @Id
@@ -30,6 +32,10 @@ public class AddressBookModel {
         this.zip=addressBookDto.getZip();
         this.phoneNumber=addressBookDto.getPhoneNumber();
         this.eMail=addressBookDto.geteMail();
+
+    }
+
+    public AddressBookModel() {
 
     }
 
