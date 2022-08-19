@@ -1,6 +1,9 @@
-package com.blz.AddressBook.service;
+package com.blz.AddressBook.Service;
+
 
 import org.springframework.stereotype.Component;
+
+import lombok.extern.slf4j.Slf4j;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -9,6 +12,7 @@ import java.util.Date;
 import java.util.Properties;
 
 @Component
+@Slf4j
 public class MailService {
 
 //	@Autowired
@@ -51,7 +55,7 @@ public class MailService {
             msg.setSentDate(new Date());
             msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail, false));
             Transport.send(msg);
-            System.out.println("Email Sent Successfully........."); }
+            log.info("Email Sent Successfully........."); }
         catch (Exception e)
         {
             e.printStackTrace();

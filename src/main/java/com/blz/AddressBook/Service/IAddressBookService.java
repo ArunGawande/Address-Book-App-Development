@@ -1,10 +1,9 @@
-package com.blz.AddressBook.service;
+package com.blz.AddressBook.Service;
 
 import java.util.List;
 
 import com.blz.AddressBook.Dto.AddressBookDto;
 import com.blz.AddressBook.Model.AddressBookModel;
-import com.blz.AddressBook.Util.Response;
 
 
 public interface IAddressBookService {
