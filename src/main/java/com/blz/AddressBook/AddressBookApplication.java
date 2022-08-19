@@ -1,4 +1,4 @@
-package com.bridgelabz.addressbook;
+package com.blz.AddressBook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
