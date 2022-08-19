@@ -27,7 +27,7 @@ public class AddressBookModel {
 
 
     public AddressBookModel(AddressBookDto addressBookDto) {
-//		this.contactId=addressBookDto.getContactId();
+
         this.firstName=addressBookDto.getFirstName();
         this.lastName=addressBookDto.getLastName();
         this.address=addressBookDto.getAddress();
@@ -44,4 +44,5 @@ public class AddressBookModel {
 
     public AddressBookModel() {
         super();
-    }}
+    }
+}
