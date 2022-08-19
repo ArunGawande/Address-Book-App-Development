@@ -1,12 +1,13 @@
 package com.blz.AddressBook.Model;
 
 
-import javax.persistence.*;
-
 import com.blz.AddressBook.Dto.AddressBookDto;
-
-
 import lombok.Data;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Data
 @Entity
@@ -24,10 +25,7 @@ public class AddressBookModel {
     private long phoneNumber;
     private String mail;
 
-
-
     public AddressBookModel(AddressBookDto addressBookDto) {
-
         this.firstName=addressBookDto.getFirstName();
         this.lastName=addressBookDto.getLastName();
         this.address=addressBookDto.getAddress();
@@ -37,12 +35,10 @@ public class AddressBookModel {
         this.phoneNumber=addressBookDto.getPhoneNumber();
         this.mail=addressBookDto.getMail();
 
-
     }
-
-
 
     public AddressBookModel() {
         super();
     }
+
 }

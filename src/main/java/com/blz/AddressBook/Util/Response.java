@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Response {
 
+    public Response(String string, int i) {
+        this.message=string;
+        this.errorCode=i;
+    }
     private String message;
     private int errorCode;
     private Object token;
